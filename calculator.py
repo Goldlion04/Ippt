@@ -1,6 +1,6 @@
-x = float(input("First number"))
-y = float(input("Seconf number"))
-operation = input("Operation")
+x = float(input("Число №1"))
+y = float(input("Число №2"))
+operation = input("Введіть операцію")
 
 result = None
 
@@ -16,4 +16,7 @@ else:
     print('Unsupported operation')
 
 if result is not None:
-    print ('Result:', result)
+    print ('Результат:', result)
+    
+    
+    
