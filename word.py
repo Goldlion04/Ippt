@@ -1,3 +1,3 @@
 string = str(input(""))
-triple = "".join([x*4 for x in string])
+triple = "".join([x*3 for x in string])
 print(triple)
