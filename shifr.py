@@ -1,7 +1,13 @@
-alpha = "abcdefghijklmnoprstuvwxyz"
-step=1
-text = input("Текст:").strip()
-res = ''
-for c in text:
-    res += alpha[(alpha.index(c) + step)%len(alpha)]
-print('Result :"'+ res + '"')
+alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUYWXYZabcdefghijklmopqrstuvwxyzАБВГДЕЄЖЗИІЇйКЛМНОПРСТУФЧЦЧШЩЬЮЯабвгдеєжзиіїйклмнопрстуфхцшщбюяАБВГДЕЄЖЗИІЇйКЛМНОПРСТУФЧЦЧШЩЬЮЯабвгдеєжзиіїйклмнопрстуфхцшщбюя01234567890123456789"
+
+encrypt = input("Речення: ")
+key = int(input("ключ (1-25): "))
+encrypted = ""
+for letter in encrypt:
+    position = alphabet.find(letter)
+    newPosition = position + key
+    if letter in alphabet:
+        encrypted = encrypted + alphabet[newPosition]
+    else:
+        encrypted = encrypted + letter
+print("Шифр: ", encrypted)
